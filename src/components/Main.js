@@ -14,3 +14,9 @@ class Main extends React.Component {
 }
 
 export default Main;
+
+Main.proptypes={
+    posts : React.PropTypes.array.isRequired,
+    comments : React.PropTypes.array.isRequired,
+    dispatch : React.PropTypes.func.isRequired
+};
