@@ -1,5 +1,6 @@
 import React from 'react';
 
+
 class Photo extends React.Component {
 
  render(){
@@ -7,13 +8,13 @@ class Photo extends React.Component {
         return(
             <figure className="grid-figure">
                 <div className="grid-photo-wrap">
-                    <img src={post.display_src} className="grid-photo" />
+                    <img alt="toto" src={post.display_src} className="grid-photo" />
                     <span className="likes-heart">{post.likes}</span>
                 </div>
                 <figcaption>
                     <p>{post.caption}</p>
                     <div className="control-buttons">
-                        <button className="likes">&hearts; {post.likes}</button>
+                        <button onClick={this.props.increment.bind(null,i)} className="likes">bbb &hearts; {post.likes}</button>
                     </div>
                 </figcaption>
             </figure>
@@ -27,7 +28,8 @@ export default Photo;
 
 Photo.propTypes = {
     post : React.PropTypes.object.isRequired,
-    i : React.PropTypes.number.isRequired
+    i : React.PropTypes.number.isRequired,
+    increment : React.PropTypes.func.isRequired
 };
 
 /*

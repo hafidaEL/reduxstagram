@@ -5,7 +5,7 @@ class PhotoGrid extends React.Component {
     render(){
         return(
             <div className="photo-grid">
-                { this.props.posts.map((post,i) => <Photo {...this.props} key={i} post={post} /> ) }
+                { this.props.posts.map((post,i) => <Photo {...this.props} key={i} i={i} post={post} /> ) }
             </div>
 
         )
@@ -15,5 +15,7 @@ class PhotoGrid extends React.Component {
 export default PhotoGrid;
 
 PhotoGrid.proptypes={
-    posts : React.PropTypes.array.isRequired
+    posts : React.PropTypes.array.isRequired,
+    increment : React.PropTypes.func.isRequired
+
 };
