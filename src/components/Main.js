@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router';
+import MonFooter from './MonFooter';
 
 
 class Main extends React.Component {
@@ -8,6 +9,7 @@ class Main extends React.Component {
             <div>
                 <h1><Link to='/'>Reduxstagram</Link></h1>
                 {React.cloneElement({...this.props.children}, {...this.props})}
+                <MonFooter />
             </div>
         )
     }
