@@ -1,5 +1,6 @@
 import React from 'react';
 import CSSTransitionGroup from 'react-addons-css-transition-group';
+import { Link } from 'react-router';
 
 
 class Photo extends React.Component {
@@ -9,7 +10,9 @@ class Photo extends React.Component {
         return(
             <figure className="grid-figure">
                 <div className="grid-photo-wrap">
-                    <img alt="toto" src={post.display_src} className="grid-photo" />
+                   <Link to={`/view/${post.code}`}>
+                        <img alt="toto" src={post.display_src} className="grid-photo" /> 
+                   </Link>
                         <CSSTransitionGroup
                            transitionName="like"
                            transitionEnterTimeout={500}

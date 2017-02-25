@@ -4,3 +4,12 @@ export function increment(index) {
         index 
     }
 }
+
+export function addComment(postID, author, comment) {
+    return {
+        type : 'ADD_COMMENT',
+        postID, 
+        author, 
+        comment
+    }
+}

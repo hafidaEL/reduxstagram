@@ -16,6 +16,7 @@ export default PhotoGrid;
 
 PhotoGrid.proptypes={
     posts : React.PropTypes.array.isRequired,
+    comments : React.PropTypes.array.isRequired,
     increment : React.PropTypes.func.isRequired
 
 };
