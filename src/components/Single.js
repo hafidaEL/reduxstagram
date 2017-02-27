@@ -13,8 +13,8 @@ class Single extends React.Component {
         const commentsPost = this.props.comments[postId] || [];
         return(
             <div>
-                <Photo i={i} post={post} {...this.props} />
-                <Comments commentsPost={commentsPost} {...this.props}/>
+                <Photo i={i} post={post} increment={this.props.increment} />
+                <Comments commentsPost={commentsPost} addComment={this.props.addComment} postId={postId} />
             </div>
         )
     }
@@ -25,4 +25,7 @@ export default Single;
 Single.proptypes={
     posts : React.PropTypes.array.isRequired,
     comments : React.PropTypes.array.isRequired,
+    increment : React.PropTypes.func.isRequired,
+    addComment : React.PropTypes.func.isRequired,
+
 };

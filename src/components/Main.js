@@ -20,5 +20,7 @@ export default Main;
 Main.proptypes={
     posts : React.PropTypes.array.isRequired,
     comments : React.PropTypes.array.isRequired,
-    dispatch : React.PropTypes.func.isRequired
+    dispatch : React.PropTypes.func.isRequired,
+    addComment : React.PropTypes.func.isRequired,
+    increment : React.PropTypes.func.isRequired,
 };

@@ -20,10 +20,12 @@ class Comments extends React.Component {
         e.preventDefault();
         const author = this.refs.author.value;
         const comment = this.refs.comment.value;
-        const { postId } = this.props.params;
+        const { postId } = this.props;
         this.props.addComment(postId, author, comment);
-        // reset à faire des champs du formulaire 
+        // reset des champs du formulaire 
+        this.refs.commentForm.reset();
     }
+
     render(){
         return(
             <div className="comments">
@@ -43,5 +45,5 @@ export default Comments;
 Comments.proptypes={
     commentsPost : React.PropTypes.array.isRequired,
     addComment : React.PropTypes.func.isRequired,
-    removeComment : React.PropTypes.func.isRequired,
+    postId : React.PropTypes.string.isRequired,
 };
