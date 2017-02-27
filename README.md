@@ -11,3 +11,5 @@ react 15.4.2
 react-addons-css-transition-group
 redux-logger
 
+
+Basé sur le tuto vidéo ReduxStagram sur https://learnredux.com/

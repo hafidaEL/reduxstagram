@@ -5,6 +5,7 @@ class Comments extends React.Component {
         super(props);
         this.handleSubmit = this.handleSubmit.bind(this);
     }
+ 
     renderComment(comment,i){
         return (
             <div key={i} className="comment"> 
@@ -21,6 +22,7 @@ class Comments extends React.Component {
         const comment = this.refs.comment.value;
         const { postId } = this.props.params;
         this.props.addComment(postId, author, comment);
+        // reset à faire des champs du formulaire 
     }
     render(){
         return(
@@ -29,7 +31,7 @@ class Comments extends React.Component {
                <form ref="commentForm" className="comment-form" onSubmit={this.handleSubmit}>
                    <input type="text" ref="author" placeholder="author"/>
                    <input type="text" ref="comment" placeholder="comment"/>
-                   <button>Submit</button>
+                   <input type="submit" hidden />
                </form>
             </div>
         )
@@ -41,4 +43,5 @@ export default Comments;
 Comments.proptypes={
     commentsPost : React.PropTypes.array.isRequired,
     addComment : React.PropTypes.func.isRequired,
+    removeComment : React.PropTypes.func.isRequired,
 };

@@ -16,7 +16,7 @@ class MonFooter extends React.Component {
 const MonFooter = () => {
      return(
             <div className="footer">
-               Hafida Elissaoui 2017
+               Le footer ...
             </div>
         );
 }

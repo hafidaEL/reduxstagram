@@ -5,8 +5,11 @@ import Comments from './Comments';
 class Single extends React.Component {
     render(){
         const { postId } = this.props.params;
+        // trouver le bon post
         const i = this.props.posts.findIndex(  (post) => post.code  === postId );
         const post = this.props.posts[i];
+
+        // les commentaires du post
         const commentsPost = this.props.comments[postId] || [];
         return(
             <div>

@@ -138,10 +138,7 @@ button,
 	box-sizing: padding-box;
 }
 
-button:hover,
-.button:hover,
-button:focus,
-.button:focus {
+button:hover, .button:hover, button:focus, .button:focus {
 	border-color: #00f;
 	outline: 0;
 }
